@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discord Auth Complete</title>
+<style>
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  h1 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .command-box {
+    background-color: #1e1e1e;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 1.1rem;
+    user-select: all;
+    margin-bottom: 1rem;
+  }
+  button {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  button:hover {
+    background-color: #505050;
+  }
+  #copiedMsg {
+    margin-top: 1rem;
+    color: #00ff99;
+    display: none;
+  }
+  p {
+    max-width: 600px;
+    text-align: center;
+    color: #b0b0b0;
+    margin-top: 2rem;
+  }
+</style>
+</head>
+<body>
+
+<h1>Complete Discord OAuth</h1>
+<div id="commandText" class="command-box"></div>
+<button onclick="copyCommand()">Copy Command</button>
+<div id="copiedMsg">Copied to clipboard!</div>
+<p>Paste this command in Discord to complete your authorization:</p>
+
+<script>
+  const commandDiv = document.getElementById('commandText');
+  // Automatically generate /authcomplete command with current URL
+  commandDiv.textContent = `/authcomplete ${window.location.href}`;
+
+  function copyCommand() {
+    const command = commandDiv.textContent.trim();
+    navigator.clipboard.writeText(command).then(() => {
+      const msg = document.getElementById('copiedMsg');
+      msg.style.display = "block";
+      setTimeout(() => { msg.style.display = "none"; }, 2000);
+    });
+  }
+</script>
+
+</body>
+</html>
