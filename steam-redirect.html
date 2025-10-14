@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Steam Redirect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <p>Attempting to launch Steam and connect...</p>
+    <p id="fallback-message" style="display: none;">If it doesn't open, click the link below:</p>
+    <p><a id="steam-link" href="#" style="display: none;">Click to Connect Manually</a></p>
+
+    <script>
+        // 1. Get the full query string from the URL (everything after '?')
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        
+        // 2. Get the value of the 'uri' parameter (e.g., steam://connect/168.100.161.185:27086/password)
+        const steamUri = urlParams.get('uri');
+
+        if (steamUri) {
+            // 3. Set the browser's location to the custom URI (triggers the redirect)
+            window.location.href = steamUri;
+
+            // 4. Update the fallback link for users where the automatic redirect fails
+            document.getElementById('steam-link').href = steamUri;
+            document.getElementById('steam-link').style.display = 'inline';
+            document.getElementById('fallback-message').style.display = 'block';
+
+        } else {
+            // If the URI parameter is missing
+            document.body.innerHTML = '<h1>Error: Steam URI not provided.</h1><p>Please ensure the link is correctly formatted.</p>';
+        }
+    </script>
+</body>
+</html>
