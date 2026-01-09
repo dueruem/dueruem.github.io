@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knice Kustoms | Terms & Privacy</title>
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -41,12 +39,10 @@
             color: #3498db;
             text-decoration: none;
             font-weight: bold;
-            white-space: nowrap; /* Keeps "Privacy Policy" on one line */
+            white-space: nowrap;
             padding: 5px 10px;
         }
-        nav a:hover {
-            color: #9b59b6;
-        }
+        nav a:hover { color: #9b59b6; }
         h1 { color: #ffffff; }
         h2 { color: #3498db; border-left: 4px solid #3498db; padding-left: 10px; margin-top: 40px; }
         h3 { color: #9b59b6; }
@@ -54,13 +50,8 @@
         .highlight { color: #f1c40f; font-weight: bold; }
         .footer { margin-top: 50px; font-size: 0.8em; color: #777; text-align: center; border-top: 1px solid #333; padding-top: 20px; }
         .alert { background: #2c3e50; border-left: 5px solid #e74c3c; padding: 15px; margin: 20px 0; border-radius: 4px; }
-
         @media (max-width: 600px) {
-            nav {
-                flex-direction: column;
-                align-items: center;
-                gap: 5px;
-            }
+            nav { flex-direction: column; align-items: center; gap: 5px; }
         }
     </style>
 </head>
@@ -75,64 +66,74 @@
     <a href="#tos">Terms of Service</a>
     <a href="#conduct">Conduct</a>
     <a href="#privacy">Privacy Policy</a>
+    <a href="#liability">Legal & Liability</a>
 </nav>
 
 <div class="alert">
-    <strong>TL;DR:</strong> Don't join if you have less than 2 hours of time. We use automated systems (Janitors) to delete your data every 90 days. Respect the other 9 players.
+    <strong>TL;DR:</strong> Matches can take 2 hours. We use automated scripts to delete outdated data. By joining, you consent to being streamed. You must be <strong>16 years old or older</strong> or have parental consent.
 </div>
 
 <h2 id="tos">1. Terms of Service</h2>
 
 <h3>1.1 Obligation to Finish</h3>
-<p>By using the <code>/join</code> command, you acknowledge that a CS2 match can last up to <strong>two hours</strong> (including overtimes). You are obligated to play the match in its entirety. If you abandon a match, you will be replaced and receive one <strong>Strike</strong>.</p>
+<p>By using the <code>/join</code> command, you acknowledge that a CS2 match can last up to <strong>two hours</strong>. You are obligated to play the match in its entirety. Abandoning results in a <strong>Strike</strong>.</p>
 
 <h3>1.2 Abandonment Criteria</h3>
-<p>A match is officially considered abandoned if any of the following occur:</p>
 <ul>
-    <li><strong>No-Show:</strong> Failure to connect to the server within <span class="highlight">10 minutes</span> of the match initialization.</li>
-    <li><strong>Time-Out:</strong> Being disconnected for a total cumulative time of <span class="highlight">5 minutes</span>.</li>
-    <li><strong>Withdrawal:</strong> Explicitly stating an intent to leave or "rage quitting."</li>
+    <li><strong>No-Show:</strong> Failure to connect within <span class="highlight">10 minutes</span>.</li>
+    <li><strong>Time-Out:</strong> Disconnected for a cumulative <span class="highlight">2 minutes</span>.</li>
+    <li><strong>Withdrawal:</strong> Explicitly stating intent to leave.</li>
 </ul>
 
 <h3>1.3 Competitive Integrity</h3>
-<p>Unauthorized third-party software ("cheats") or intentional "griefing" (damaging teammates/throwing) is strictly prohibited. Staff review <strong>GOTV replays (also known as 'demos' or '.dem files')</strong> to verify violations. Punishments range from temporary strikes to permanent blacklisting.</p>
+<p>Cheating or "griefing" is strictly prohibited. We review <strong>GOTV replays</strong> to verify violations. Punishments include blacklisting.</p>
 
+<h3>1.4 Account Linking</h3>
+<p>To participate in custom matches, you must link the same Steam account you will be playing with to your Discord account using the <code>/link</code> command.</p>
 
 <h2 id="conduct">2. Communication & Conduct</h2>
-<p>The rules of our Discord and Twitch communities apply to the game server at all times.</p>
 
 <h3>2.1 Behavioral Standards</h3>
-<p>No hate speech, discrimination, or harassment. We maintain a "chill" environment. Toxicity that ruins the experience for the other 9 players or the stream audience will result in removal.</p>
+<p>No hate speech or harassment. Toxicity that ruins the experience for the other 9 players or the stream audience will result in immediate removal.</p>
 
-<h3>2.2 Stream Safety</h3>
-<ul>
-    <li><strong>No Promotion:</strong> No advertising social media, gambling sites, or other servers.</li>
-    <li><strong>Names/Avatars:</strong> Players must not have offensive names or avatars that violate Twitch/Discord ToS.</li>
-    <li><strong>Doxing:</strong> Sharing personal information of others is a terminal violation.</li>
-</ul>
+<h3>2.2 Stream Consent & Safety</h3>
+<p>By participating, you grant Knice Kustoms permission to broadcast and archive your gameplay, in-game name, and voice comms on platforms like Twitch. No advertising or offensive avatars allowed.</p>
 
 
-<h2 id="privacy">3. Privacy Policy</h2>
-<p>We believe in "Privacy by Design." We only collect what is necessary to run the matches.</p>
+<h2 id="privacy">3. Privacy Policy (GDPR)</h2>
+<p>We process data under <strong>Art. 6(1)(b)</strong> (Service Fulfillment) and <strong>Art. 6(1)(f)</strong> (Legitimate Interest) of the GDPR.</p>
 
-<h3>3.1 Data We Collect</h3>
-<p>We store your <strong>SteamID</strong> and <strong>DiscordID</strong> to link your profile. We also record <strong>GOTV Match Replays (.dem)</strong> to verify fair play and abandonment strikes.</p>
+<h3>3.1 Technical Processing</h3>
+<p>We collect your <strong>SteamID</strong> and <strong>DiscordID</strong>. Our custom bot processes this data to send <strong>RCON commands</strong> to our game server for team management and access control.</p>
 
 <h3>3.2 The 90-Day "Janitor" Rule</h3>
-<p>We do not keep long-term records of your play history. Our automated <strong>Janitor Scripts</strong> run every 15 minutes to perform the following:</p>
+<p>Per the principle of data minimization, our <strong>Janitor Scripts</strong> run every 15 minutes to purge data:</p>
 <ul>
-    <li><strong>Strikes:</strong> Forgiven and deleted after up to 90 days of clean play (30 days for 1 Strike, 60 days for 2 strikes and 90 days for 3 or more).</li>
-    <li><strong>Replays:</strong> All match recordings are permanently deleted from our archive after 90 days, unless they are currently subject to an active investigation by Staff.</li>
-    <li><strong>Bans:</strong> Only active bans are retained to prevent evasion. Expired bans are purged.</li>
+    <li><strong>Strikes:</strong> Deleted after 30–90 days of clean play.</li>
+    <li><strong>Replays:</strong> Permanently deleted after 90 days unless under active investigation.</li>
+    <li><strong>Bans:</strong> Expired ban records are purged; only active bans are retained.</li>
 </ul>
 
-<h3>3.3 Your Control (The /unlink Command)</h3>
-<p>You have the "Right to be Forgotten." At any time, you may use the <code>/unlink</code> command. This will immediately delete your linked profile and all associated stats from our database (excluding active bans and strikes).</p>
+<h3>3.3 The /unlink Command</h3>
+<p>To exercise your "Right to be Forgotten," use <code>/unlink</code>. This immediately deletes your linked profile and associated stats (excluding active security bans).</p>
+
+
+<h2 id="liability">4. Legal Notice & Liability</h2>
+
+<h3>4.1 Disclaimer of Liability</h3>
+<p>Knice Kustoms is a community project provided "as-is." We are not liable for any technical malfunctions, data loss, or damages to hardware/software resulting from the use of our bot, plugins, or servers.</p>
+
+<h3>4.2 Age Requirement & Parental Consent</h3>
+<p>
+    Users must be at least <strong>16 years of age</strong> to participate. 
+    If you are between the ages of 13 and 15, you may only participate if your 
+    legal guardian has reviewed and agreed to these Terms and our Privacy Policy 
+    on your behalf. Participation by anyone under the age of 13 is strictly prohibited.
+</p>
 
 <div class="footer">
-    &copy; 2025 Knice Kustoms. <br>
-    An official community project for <strong>Knerd Kollektiv</strong>.<br>
-    <a href="https://mein.online-impressum.de/knerdkollektiv/" style="color: #3498db; text-decoration: none;">Impressum</a><br>
+    &copy; 2026 Knice Kustoms. <br>
+    Responsibility for data processing lies with the entity in the <a href="https://mein.online-impressum.de/knerdkollektiv/" style="color: #3498db; text-decoration: none;">Impressum</a>.<br>
     CS2 is a trademark of Valve Corporation. This project is not affiliated with Valve.<br>
 </div>
 
