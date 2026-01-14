@@ -80,10 +80,11 @@
 
 <h3>1.2 Abandonment Criteria</h3>
 <ul>
-    <li><strong>No-Show:</strong> Failure to connect within <span class="highlight">10 minutes</span>.</li>
-    <li><strong>Time-Out:</strong> Disconnected for a cumulative <span class="highlight">2 minutes</span>.</li>
+    <li><strong>No-Show:</strong> Failure to connect within <span class="highlight">5 minutes</span>.</li>
+    <li><strong>Time-Out:</strong> Disconnected for a cumulative <span class="highlight">2 minutes</span> or <span>one full round (counting from end of freezetime to start of next freezetime)</span>.</li>
     <li><strong>Withdrawal:</strong> Explicitly stating intent to leave.</li>
 </ul>
+<p>If your internet may not be fast enough to download workshop maps in time to connect, consider downloading the <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3566207625" style="color: #3498db; text-decoration: none;">Workshop Collection</a> in advance. This collection contains all community maps the server is able to use.</p>
 
 <h3>1.3 Competitive Integrity</h3>
 <p>Cheating or "griefing" is strictly prohibited. We review <strong>GOTV replays</strong> to verify violations. Punishments include blacklisting.</p>
@@ -91,13 +92,62 @@
 <h3>1.4 Account Linking</h3>
 <p>To participate in custom matches, you must link the same Steam account you will be playing with to your Discord account using the <code>/link</code> command.</p>
 
+<h3>1.5 Sharing Server Credentials</h3>
+<p>Sharing server connection details (password, connect command, connect URL, etc.) with non-participants is strictly prohibited, will result in those who join via shared details being banned, and is grounds for a permanent ban for the leaker.</p>
+
+<h3 id="strikes">1.6 The Strike System</h3>
+<p>Each strike is a formal record of a violation. We use a progressive system to encourage fair play:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; background: #252525; border-radius: 8px; overflow: hidden;">
+    <thead>
+        <tr style="background: #3498db; color: white; text-align: left;">
+            <th style="padding: 12px;">Violation Count</th>
+            <th style="padding: 12px;">Consequence</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="border-bottom: 1px solid #333;">
+            <td style="padding: 10px;">1st Strike</td>
+            <td style="padding: 10px;">Warning Only</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #333;">
+            <td style="padding: 10px;">2nd Strike</td>
+            <td style="padding: 10px;"><strong>1 Day Ban</strong></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #333;">
+            <td style="padding: 10px;">3rd Strike</td>
+            <td style="padding: 10px;"><strong>7 Day Ban</strong></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #333;">
+            <td style="padding: 10px;">4th Strike</td>
+            <td style="padding: 10px;"><strong>14 Day Ban</strong></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #333;">
+            <td style="padding: 10px;">5th Strike</td>
+            <td style="padding: 10px;"><strong>30 Day Ban</strong></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #333;">
+            <td style="padding: 10px;">6th Strike</td>
+            <td style="padding: 10px;"><strong>60 Day Ban</strong></td>
+        </tr>
+        <tr>
+            <td style="padding: 10px;">7th+ Strike</td>
+            <td style="padding: 10px;"><strong>90 Day Ban / Permanent Review</strong></td>
+        </tr>
+    </tbody>
+</table>
+
+<p style="font-size: 0.9em; font-style: italic; color: #aaa;">
+    *Reminder: Clean play for 30-90 days removes strikes from your record (See Section 3.2).
+</p>
+
 <h2 id="conduct">2. Communication & Conduct</h2>
 
 <h3>2.1 Behavioral Standards</h3>
 <p>No hate speech or harassment. Toxicity that ruins the experience for the other 9 players or the stream audience will result in immediate removal.</p>
 
 <h3>2.2 Stream Consent & Safety</h3>
-<p>By participating, you grant Knice Kustoms permission to broadcast and archive your gameplay, in-game name, and voice comms on platforms like Twitch. No advertising or offensive avatars allowed.</p>
+<p>By participating, you grant any players permission to broadcast and archive your gameplay, in-game name, and voice comms on platforms like Twitch. No advertising or offensive avatars allowed.</p>
 
 
 <h2 id="privacy">3. Privacy Policy (GDPR)</h2>
@@ -109,7 +159,7 @@
 <h3>3.2 The 90-Day "Janitor" Rule</h3>
 <p>Per the principle of data minimization, our <strong>Janitor Scripts</strong> run every 15 seconds to purge data:</p>
 <ul>
-    <li><strong>Strikes:</strong> Deleted after 30–90 days of clean play.</li>
+    <li><strong>Strikes:</strong> Deleted after 30–90 days. (Strike 1 is deleted after 30 days, Strike 2 after 60 days, Strikes 3 and beyond are deleted after 90 days)</li>
     <li><strong>Replays:</strong> Permanently deleted after 90 days unless under active investigation.</li>
     <li><strong>Bans:</strong> Expired ban records are purged; only active bans are retained.</li>
 </ul>
